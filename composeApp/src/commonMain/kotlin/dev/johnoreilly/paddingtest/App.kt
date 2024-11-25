@@ -28,7 +28,7 @@ fun App() {
                 Scaffold(
                     topBar = { TopAppBar(title = { Text("Some title") }) }
                 ) {
-                    Column(Modifier.padding()) {
+                    Column(Modifier.padding(it)) {
                         Text("Hi")
                         Text("there")
                     }
