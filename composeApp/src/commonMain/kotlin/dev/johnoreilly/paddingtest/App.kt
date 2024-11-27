@@ -14,6 +14,7 @@ import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import org.jetbrains.compose.ui.tooling.preview.Preview
@@ -32,7 +33,10 @@ fun App() {
                 // (normally in some nested composable)
                 Scaffold(
                     topBar = { CenterAlignedTopAppBar(
-                        title = { Text("Some title") }
+                        title = { Text("Some title") },
+                        colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
+                            containerColor = MaterialTheme.colorScheme.primaryContainer,
+                        )
                     )}
                 ) {
                     Column(Modifier.padding(it)) {
